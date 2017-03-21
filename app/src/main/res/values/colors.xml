@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Text-->
+    <color name="textviewDefaultColor">#323232</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_grey">#3c3f41</color>
+    <color name="text_orange">#bc3e18</color>
+    <color name="colorTextBlack">#222222</color>
+    <color name="colorTextHint">#585858</color>
+    <color name="colorTextHintLight">#616161</color>
+
+
+    <!--Edit Text-->
+    <color name="whiteOverlay">#97ececec</color>
+    <color name="whiteOverlayPressed">#6e303f9f</color>
+    <color name="whiteOverlayStroke">#6e303f9f</color>
+    <color name="editTextDefaultColorHint">#636363</color>
+    <color name="editTextDefaultColor">#242424</color>
+
+    <!--Default Button-->
+    <color name="buttonDetfaultDisabled">#A4A4A4</color>
+    <color name="buttonDefaultEnabled">#37678c</color>
+    <color name="buttonDefaultEnabledLight">#4582b2</color>
+    <color name="buttonDefaultPressed">#3e698a</color>
+    <color name="buttonDefaultPressedLight">#427caa</color>
+    <color name="buttonDefaultNormalDark">#37678c</color>
+    <color name="buttonDefaultNormal">#416d8f</color>
+    <color name="buttonDefaultNormalLight">#416d8f</color>
+    <color name="buttonNegative">#d84c21</color>
+    <color name="buttonNegativeDark">#bc3e18</color>
+    <color name="buttonTextWhite">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="tint_drawable_grey">#a5a5a5</color>
+    <color name="buttonGreenEnabled">#00942a</color>
+    <color name="buttonGreenPressed">#037e26</color>
+    <color name="buttonGreenNormal">#00942a</color>
+
+    <!--Layout Background-->
+    <color name="layoutBackgroundgrey">#b3b2b2</color>
+    <color name="layoutBackgroundgreyDark">#a6a6a6</color>
+    <color name="layoutBackgroundgreyMedium">#e7e7e7</color>
+    <color name="layoutBackgroundgreyLight">#f0f0f0</color>
+    <color name="box_error">#92feb1b2</color>
+    <color name="box_warning">#a95657</color>
+    <color name="box_info">#3987a7</color>
+    <color name="msg_unread_background">#a9e6ff</color>
+    <color name="background_selected">#e699c5f1</color>
+    <color name="didiverGrey">#9a9a9a</color>
+    <color name="colorGreen">#A5DE40</color>
+    <color name="black">#000000</color>
+    <color name="text_white_disabled">#BCBCBC</color>
+    <color name="status_pending">#FF9800</color>
+    <color name="status_cancel">#F44336</color>
+    <color name="status_success">#4CAF50</color>
+    <color name="status_new">#2196F3</color>
+</resources>
