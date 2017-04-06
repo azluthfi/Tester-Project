@@ -6,17 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.app.base.R;
+import com.app.base.base.BaseMvpFragment;
+import com.app.base.listeners.AlertLitener;
 import com.hannesdorfmann.fragmentargs.FragmentArgs;
 import com.hannesdorfmann.fragmentargs.annotation.Arg;
 import com.hannesdorfmann.fragmentargs.annotation.FragmentWithArgs;
-import com.app.base.R;
-import com.app.base.base.BaseFragment;
-import com.app.base.listeners.AlertLitener;
 
 import butterknife.BindView;
 
 @FragmentWithArgs
-public class Dashboard extends BaseFragment<IDashboardView, DashboardPresenter> implements IDashboardView, AlertLitener {
+public class Dashboard extends BaseMvpFragment<IDashboardView, DashboardPresenter> implements IDashboardView, AlertLitener {
 
     @Arg String mParam5;
     @Arg String mParam1;

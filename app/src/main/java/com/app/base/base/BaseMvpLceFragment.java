@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,6 +12,9 @@ import com.app.base.listeners.FragmentInteractionListener;
 import com.app.base.modules.dashboard.Dashboard;
 import com.app.base.utility.CommonUtilities;
 import com.hannesdorfmann.fragmentargs.FragmentArgs;
+import com.hannesdorfmann.mosby3.mvp.MvpFragment;
+import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
+import com.hannesdorfmann.mosby3.mvp.lce.MvpLceView;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -22,7 +24,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  * Created by j3p0n on 1/2/2017.
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseMvpLceFragment<V extends MvpLceView, P extends MvpPresenter<V>> extends MvpFragment<V, P> {
 
     protected FragmentInteractionListener mListener;
     private SweetAlertDialog pDialog;

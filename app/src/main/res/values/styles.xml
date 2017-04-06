@@ -27,5 +27,116 @@
         <item name="android:shadowRadius">0.2</item>
         <item name="android:textSize">15sp</item>
     </style>
+    <!--Button-->
+    <style name="ButtonColorDefault" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/md_grey_300</item>
+    </style>
 
+    <style name="ButtonColorPrimary" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/md_blue_500</item>
+    </style>
+
+    <style name="ButtonColorSuccess" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/md_green_500</item>
+    </style>
+
+    <style name="ButtonColorWarning" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/md_orange_500</item>
+    </style>
+
+    <style name="ButtonColorError" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/md_red_500</item>
+    </style>
+
+    <style name="ButtonDefault" parent="Widget.AppCompat.Button.Colored">
+        <item name="theme">@style/ButtonColorDefault</item>
+        <item name="colorButtonNormal">@color/md_grey_300</item>
+        <item name="android:textColor">@color/md_grey_900</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.AppCompat.Button.Colored">
+        <item name="theme">@style/ButtonColorPrimary</item>
+        <item name="colorButtonNormal">@color/md_blue_500</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="ButtonSuccess" parent="Widget.AppCompat.Button.Colored">
+        <item name="theme">@style/ButtonColorSuccess</item>
+        <item name="colorButtonNormal">@color/md_green_500</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="ButtonWarning" parent="Widget.AppCompat.Button.Colored">
+        <item name="theme">@style/ButtonColorWarning</item>
+        <item name="colorButtonNormal">@color/md_orange_500</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="ButtonError" parent="Widget.AppCompat.Button.Colored">
+        <item name="theme">@style/ButtonColorError</item>
+        <item name="colorButtonNormal">@color/md_red_500</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <!--End Button-->
+
+    <!--TextView-->
+    <style name="textTitle">
+        <item name="android:textSize">@dimen/material_typography_title</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+    <style name="textTitleWhite">
+        <item name="android:textSize">@dimen/material_typography_title</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+    <style name="textHeadline">
+        <item name="android:textSize">@dimen/material_typography_headline</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+    <style name="textHeadlineWhite">
+        <item name="android:textSize">@dimen/material_typography_headline</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+    <style name="textSubHeading">
+        <item name="android:textSize">@dimen/material_typography_subheading</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+    <style name="textSubTitle">
+        <item name="android:textSize">@dimen/material_typography_body1</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+    <style name="textCaptionWhite">
+        <item name="android:textSize">@dimen/material_typography_caption</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+    <style name="textCaption">
+        <item name="android:textSize">@dimen/material_typography_caption</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="textDisplay1White">
+        <item name="android:textSize">@dimen/material_typography_display1</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+    <style name="textDisplay1">
+        <item name="android:textSize">@dimen/material_typography_display1</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_white_disabled</item>
+        <item name="textAllCaps">true</item>
+    </style>
 </resources>

@@ -4,15 +4,18 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.app.base.listeners.AlertLitener;
 import com.app.base.listeners.FragmentInteractionListener;
-import com.app.base.modules.dashboard.Dashboard;
 import com.app.base.utility.CommonUtilities;
 import com.hannesdorfmann.fragmentargs.FragmentArgs;
+import com.hannesdorfmann.mosby3.mvp.MvpFragment;
+import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -22,12 +25,12 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  * Created by j3p0n on 1/2/2017.
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseMvpFragment<V extends MvpView, P extends MvpPresenter<V>> extends MvpFragment<V, P> {
 
     protected FragmentInteractionListener mListener;
     private SweetAlertDialog pDialog;
     private Unbinder unbinder;
-    private AlertLitener alertListener;
+    public AlertLitener alertListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,7 @@ public abstract class BaseFragment extends Fragment {
         unbinder.unbind();
     }
 
-    public void setAlertListener(Dashboard alertListener) {
+    public void setAlertListener(AlertLitener alertListener) {
         this.alertListener = alertListener;
     }
 
@@ -104,6 +107,13 @@ public abstract class BaseFragment extends Fragment {
         if (pDialog != null) {
             pDialog.dismiss();
         }
+    }
+
+    public void hideLoading(SwipeRefreshLayout swipeRefreshLayout, ProgressBar progress) {
+        if (swipeRefreshLayout.isRefreshing()) {
+            swipeRefreshLayout.setRefreshing(false);
+        }
+        progress.setVisibility(View.GONE);
     }
 
     @Override

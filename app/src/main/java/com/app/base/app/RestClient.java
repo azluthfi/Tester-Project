@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.app.base.utility.Config.BASE_URL;
@@ -28,7 +28,7 @@ public class RestClient {
         Retrofit.Builder retrofit = new Retrofit.Builder()
                 .client(getRequestHeader())
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create());
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
 
 
         apiService = retrofit.baseUrl(BASE_URL).build().create(ApiService.class);
