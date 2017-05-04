@@ -1,0 +1,114 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_grey_200"
+                    android:paddingTop="@dimen/layout_space_small"
+                    android:paddingBottom="@dimen/layout_space_small">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/md_grey_500"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toLeftOf="@+id/tvHeaderContent"
+                        android:layout_toStartOf="@+id/tvHeaderContent"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:id="@+id/tvHeaderContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Header Content"
+                        android:layout_margin="@dimen/layout_space_small"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/md_grey_500"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toRightOf="@+id/tvHeaderContent"
+                        android:layout_toEndOf="@+id/tvHeaderContent"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_space_small">
+                    <ImageView
+                        android:id="@+id/ivLocation"
+                        android:layout_width="@dimen/material_layout_icon"
+                        android:layout_height="@dimen/material_layout_icon"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/layout_space_small"
+                        android:src="@drawable/ic_location_on_grey_500_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ivLocation"
+                        android:layout_toEndOf="@+id/ivLocation"
+                        android:layout_toLeftOf="@+id/tvStatus"
+                        android:layout_toStartOf="@+id/tvStatus"
+                        android:layout_margin="@dimen/layout_space_xsmall"
+                        android:layout_centerVertical="true"
+                        android:text="Lokasi"/>
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/layout_space_small"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="Status"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/md_grey_200"/>
+
+                <TextView
+                    android:id="@+id/tvReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_space_large"/>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/view_error"/>
+
+    <include layout="@layout/view_loading"/>
+</FrameLayout>

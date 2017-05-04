@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MerchantTool</string>
+    <string name="app_name">Basarnas</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,4 +8,23 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="emergency_number">0274-6498-080</string>
+    <string name="emergency_number_call">02746498080</string>
+    <string name="basarnas_yogyakarta">Basarnas Yogyakarta</string>
+    <string name="basarnas_yogyakarta_address">JL. RAYA YOGYA - WATES KM. 11,5 SEDAYU KAB. BANTUL YOGYAKARTA 55752</string>
+    <string name="text_area">(Yogyakarta)</string>
+    <string name="national_number">115</string>
+    <string name="text_national">(Indonesia)</string>
+    <string name="text_report">Lapor</string>
+    <string name="text_not_auth">Anda belum login. Silahkan login</string>
+    <string name="hint_phone">Phone (0812xxxxxxxx)</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_address">Alamat</string>
+    <string name="hint_code_vrification">Kode Verifikasi</string>
+    <string name="hint_id">No.Identitas (boleh kosong)</string>
+    <string name="text_subhead_verification">Masukkan 6 digit kode verifikasi yang di kirim ke nomor anda</string>
+    <string name="action_send">Send</string>
+    <string name="url_contact">http://www.yogyakarta.basarnas.go.id/halaman/070217-hubungi-kami</string>
 </resources>

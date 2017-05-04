@@ -1,0 +1,131 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layAuthNavigation"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_space_large"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="@dimen/material_layout_icon"
+                    android:layout_height="@dimen/material_layout_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_phone_grey_500_24dp"/>
+
+                <TextView
+                    android:id="@+id/tvCodeArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivPhone"
+                    android:layout_toRightOf="@+id/ivPhone"
+                    android:text="+62"
+                    android:textSize="@dimen/material_typography_title"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/layout_space_small"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvCodeArea"
+                    android:layout_toRightOf="@+id/tvCodeArea"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_phone"
+                        android:maxLength="14"
+                        android:gravity="start"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivPassword"
+                    android:layout_width="@dimen/material_layout_icon"
+                    android:layout_height="@dimen/material_layout_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_vpn_key_grey_500_24dp"
+                    android:layout_marginRight="@dimen/layout_space_small"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivPassword"
+                    android:layout_toRightOf="@+id/ivPassword"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="?colorControlNormal">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/ButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_space_large"
+                android:text="Login"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layAuthNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/md_grey_100">
+
+        <TextView
+            android:id="@+id/tvNavigationRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/layout_space_large"
+            android:textSize="@dimen/material_typography_body1"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,11 +1,14 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- ProgressBar -->
+        <item name="cpbStyle">@style/CircularThemeProgressBar</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,9 +16,24 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.Splash">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="CircularThemeProgressBar" parent="android:Widget.Holo.ProgressBar">
+        <item name="cpb_colors">@array/loading_colors</item>
+        <item name="cpb_stroke_width">@dimen/cpb_default_stroke_width</item>
+        <item name="cpb_min_sweep_angle">@integer/cpb_default_min_sweep_angle</item>
+        <item name="cpb_max_sweep_angle">@integer/cpb_default_max_sweep_angle</item>
+        <item name="cpb_sweep_speed">@string/cpb_default_sweep_speed</item>
+        <item name="cpb_rotation_speed">@string/cpb_default_rotation_speed</item>
+    </style>
 
     <style name="buttonDefault">
         <item name="android:layout_height">@dimen/buttonDefaultHeight</item>
@@ -85,14 +103,17 @@
         <item name="android:textSize">@dimen/material_typography_title</item>
         <item name="android:textColor">@color/text_grey</item>
     </style>
+
     <style name="textTitleWhite">
         <item name="android:textSize">@dimen/material_typography_title</item>
         <item name="android:textColor">@color/text_white</item>
     </style>
+
     <style name="textHeadline">
         <item name="android:textSize">@dimen/material_typography_headline</item>
         <item name="android:textColor">@color/text_grey</item>
     </style>
+
     <style name="textHeadlineWhite">
         <item name="android:textSize">@dimen/material_typography_headline</item>
         <item name="android:textColor">@color/text_white</item>
@@ -102,14 +123,17 @@
         <item name="android:textSize">@dimen/material_typography_subheading</item>
         <item name="android:textColor">@color/text_grey</item>
     </style>
+
     <style name="textSubTitle">
         <item name="android:textSize">@dimen/material_typography_body1</item>
         <item name="android:textColor">@color/text_grey</item>
     </style>
+
     <style name="textCaptionWhite">
         <item name="android:textSize">@dimen/material_typography_caption</item>
         <item name="android:textColor">@color/text_white</item>
     </style>
+
     <style name="textCaption">
         <item name="android:textSize">@dimen/material_typography_caption</item>
         <item name="android:textColor">@color/text_grey</item>
@@ -134,6 +158,7 @@
         <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
         <item name="tabSelectedTextColor">@color/white</item>
     </style>
+
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/text_white_disabled</item>

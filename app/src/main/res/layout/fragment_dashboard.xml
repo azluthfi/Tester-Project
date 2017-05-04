@@ -1,0 +1,204 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.app.basarnas.modules.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_space_small">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo"
+                android:layout_margin="@dimen/layout_space_small"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/layout_space_small"
+                android:layout_toEndOf="@+id/ivLogo"
+                android:layout_toRightOf="@+id/ivLogo">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/layout_space_small"
+                    android:gravity="start"
+                    android:text="@string/basarnas_yogyakarta"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:gravity="start"
+                    android:text="@string/basarnas_yogyakarta_address"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/md_grey_100"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_space_small"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:id="@+id/layAreaNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/ivCallArea"
+                android:layout_toStartOf="@+id/ivCallArea"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/layout_space_small">
+
+                <TextView
+                    android:id="@+id/tvEmergencyNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/layout_space_xsmall"
+                    android:gravity="start"
+                    android:text="@string/emergency_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/material_typography_headline"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEmergencyNumber"
+                    android:gravity="start"
+                    android:text="@string/text_area"
+                    android:textColor="@color/md_grey_500"
+                    android:textSize="@dimen/material_typography_caption"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivCallArea"
+                android:layout_width="@dimen/material_layout_icon"
+                android:layout_height="@dimen/material_layout_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/layout_space_small"
+                android:src="@drawable/ic_phone_white_48dp"
+                android:tint="@color/colorAccent"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/layout_space_large"
+            android:layout_marginRight="@dimen/layout_space_large"
+            android:background="@color/md_grey_100"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_space_small"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:id="@+id/layNationalNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/ivCallNational"
+                android:layout_toStartOf="@+id/ivCallNational"
+                android:layout_margin="@dimen/layout_space_small">
+
+                <TextView
+                    android:id="@+id/tvEmergencyNumberNational"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/layout_space_xsmall"
+                    android:gravity="start"
+                    android:text="@string/national_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/material_typography_headline"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEmergencyNumberNational"
+                    android:gravity="start"
+                    android:text="@string/text_national"
+                    android:textColor="@color/md_grey_500"
+                    android:textSize="@dimen/material_typography_caption"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivCallNational"
+                android:layout_width="@dimen/material_layout_icon"
+                android:layout_height="@dimen/material_layout_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/layout_space_small"
+                android:src="@drawable/ic_phone_white_48dp"
+                android:tint="@color/colorAccent"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/layout_space_large"
+            android:layout_marginRight="@dimen/layout_space_large"
+            android:background="@color/md_grey_100"/>
+
+        <Button
+            android:id="@+id/btnReport"
+            style="@style/ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/layout_space_small"
+            android:layout_marginLeft="@dimen/layout_space_large"
+            android:layout_marginRight="@dimen/layout_space_large"
+            android:layout_marginTop="@dimen/layout_space_small"
+            android:text="@string/text_report"/>
+
+        <TextView
+            android:id="@+id/tvNotAuth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/layout_space_small"
+            android:layout_marginLeft="@dimen/layout_space_large"
+            android:layout_marginRight="@dimen/layout_space_large"
+            android:paddingTop="@dimen/layout_space_small"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+</ScrollView>

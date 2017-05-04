@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="config_shortAnimTime">200</integer>
+    <array name="loading_colors">
+        <item>@color/colorAccent</item>
+        <item>@color/colorPrimaryDark</item>
+    </array>
 </resources>
